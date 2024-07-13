@@ -54,6 +54,9 @@ app.post('/submitForm', [
         res.status(500).send('Error adding form: ' + error.message);
     }
 });
+app.post('/', (req, res) => {
+    res.send({"message":"API is working"})
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
