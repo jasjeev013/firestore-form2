@@ -23,7 +23,12 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());  // Enable CORS for all routes
+const corsOptions = {
+    origin: ['https://firestore-form2-rwly.vercel.app', 'http://localhost:3000'],
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 app.post('/submitForm', [
     body('name').notEmpty().withMessage('Name is required'),
