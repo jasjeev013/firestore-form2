@@ -24,7 +24,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 const corsOptions = {
-    origin: ['https://firestore-form2-rwly.vercel.app', 'http://localhost:3000'],
+    origin: ['https://firestore-form2.vercel.app/submitForm', 'http://localhost:3000'],
     optionsSuccessStatus: 200
 };
 
