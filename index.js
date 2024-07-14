@@ -25,7 +25,7 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 const corsOptions = {
-    origin: ['https://firestore-form2-4cyg.vercel.app', 'http://127.0.0.1:3000','http://127.0.0.1:3002'],
+    origin: ['https://firestore-form2-4cyg.vercel.app', 'http://127.0.0.1:3000','http://127.0.0.1:3002','https://form-kohl-zeta.vercel.app'],
     optionsSuccessStatus: 200
 };
 
